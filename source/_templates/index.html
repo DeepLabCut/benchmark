@@ -1,0 +1,24 @@
+{% block table %}
+<table id="myTable" class="tablesorter">
+  <thead>
+    {% for column_name, description in columns %}
+        <th style="padding: 10px" 
+          {% if description is not none %}
+            data-toggle="tooltip" data-placement="top" title="{{ description }}"
+          {% endif %}
+        >
+          {{ column_name }}<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    {% endfor %}
+  </thead>
+  <tbody>
+    {% for line in table %}
+    <tr>
+      {% for element in line %}
+      <td style="padding: 10px">{{ element | safe }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
