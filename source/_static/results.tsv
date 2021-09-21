@@ -1,19 +1,2 @@
 name	code	dataset	rmse	map
-resnet50-stride8	n/a	TRI-MOUSE	3.13	0.918
-effb0-stride8	n/a	TRI-MOUSE	3.16	0.928
-resnet50-stride4	n/a	TRI-MOUSE	3.01	0.921
-resnet50-stride4-multistage	n/a	TRI-MOUSE	3.14	0.933
-resnet50-stride8-multistage	n/a	TRI-MOUSE	3.22	0.92
-mobnet0.5-stride4	n/a	TRI-MOUSE	3.63	0.985
-mobnet0.5-stride4-multistage	n/a	TRI-MOUSE	3.83	0.896
-mobnet0.5-stride8	n/a	TRI-MOUSE	3.91	0.866
-effb0-stride4	n/a	TRI-MOUSE	3.13	0.933
-resnet50-stride8	n/a	FISH	3.33	0.683
-resnet50-stride8-multistage	n/a	FISH	3.58	0.675
-resnet50-stride8-multistage	n/a	MARMOSETS	5.86	0.876
-resnet50-stride8	n/a	MARMOSETS	5.83	0.875
-effb0-stride8	n/a	MARMOSETS		
-mobnet0.5-stride8	n/a	MARMOSETS		
-effb0-stride4	n/a	MARMOSETS		
-effb7-stride8	n/a	MARMOSETS	11.53	0.629
-effb7-stride4	n/a	MARMOSETS		
+--	--	--	--	--
