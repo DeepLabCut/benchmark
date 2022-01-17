@@ -6,12 +6,11 @@
 Welcome to the DeepLabCut Benchmark!
 ====================================
 
-This page hosts the official DeepLabCut_ benchmark.
+This page hosts the official DeepLabCut_ Benchmark.
 
 .. note::
 
-   The benchmark page is a work in progress. We will make the full benchmark datasets and
-   results available here upon publication of our paper, Lauer et al. 2021.
+
 
 Leaderboard
 -----------
