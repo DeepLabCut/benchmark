@@ -1,9 +1,9 @@
-DeepLabCut Benchmark datasets
+DeepLabCut Benchmark Datasets
 =============================
 
 .. note::
 
-    We will make the multi-animal benchmark datasets available here upon publication of our paper, Lauer et al. 2021. All datasets are under a non-commerical, attribution-required license. Please contact us if you have any questions.
+ All datasets are under a non-commerical, attribution-required license. Please contact us if you have any questions. TRI-MOUSE, PARENTING-MOUSE, MARMOSETS, and FISH are related to Lauer et al. 2022 (Nature Methods). HORSE-10, -C are related to Mathis, Biasi et al. 2021 (WACV).
 
 
 .. list-table:: 
