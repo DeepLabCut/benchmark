@@ -3,7 +3,7 @@ How to submit your models to the benchmark
 
 .. note::
 
-   The ``deeplabcut.benchmark`` package is not yet publicly released. Instructions on this page will be
+   The ``deeplabcut.benchmark`` package for model/result submission is not yet public yet. Instructions on this page will be
    updated accordingly after release. The package will be part of DeepLabCut.
 
 Submitting a model
