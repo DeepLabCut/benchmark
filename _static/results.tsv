@@ -1,0 +1,14 @@
+name	code	dataset	rmse	map
+- EfficientNet B7_s4 (30k)	https://github.com/DeepLabCut/DeepLabCut	TRI-MOUSE	4.93	0.943403
+- DLCRNet_ms4 (30k)	https://github.com/DeepLabCut/DeepLabCut	TRI-MOUSE	3.55	0.931542
+- ResNet50 (30k)	https://github.com/DeepLabCut/DeepLabCut	TRI-MOUSE	3.97	0.927728
+- EfficientNet B7_s4 (30k)	https://github.com/DeepLabCut/DeepLabCut	PARENTING	8.9	0.639412
+- DLCRNet_ms4 (30k)	https://github.com/DeepLabCut/DeepLabCut	PARENTING	9.85	0.629070
+- EfficientNet B7 (30k)	https://github.com/DeepLabCut/DeepLabCut	PARENTING	10.24	0.627089
+- EfficientNet B7_s4 (30k)	https://github.com/DeepLabCut/DeepLabCut	FISH	6.85	0.753309
+- DLCRNet_ms4 (30k)	https://github.com/DeepLabCut/DeepLabCut	FISH	7.15	0.754255
+- ResNet50_s4 (30k)	https://github.com/DeepLabCut/DeepLabCut	FISH	7.03	0.741195
+- DLCRNet_ms4 (200k)	https://github.com/DeepLabCut/DeepLabCut	MARMOSETS	7.56	0.894922
+- EfficientNet B7 (200k)	https://github.com/DeepLabCut/DeepLabCut	MARMOSETS	7.27	0.888887
+- EfficientNet B7_s4 (200k)	https://github.com/DeepLabCut/DeepLabCut	MARMOSETS	6.83	0.893077
+- DLCRNet (200k)	https://github.com/DeepLabCut/DeepLabCut	MARMOSETS	8.1	0.883469
