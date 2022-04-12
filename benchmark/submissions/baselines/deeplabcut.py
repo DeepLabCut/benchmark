@@ -7,11 +7,11 @@ import pkgutil
 
 import numpy as np
 
-import benchmark
-from benchmark.benchmarks import FishBenchmark
-from benchmark.benchmarks import MarmosetBenchmark
-from benchmark.benchmarks import ParentingMouseBenchmark
-from benchmark.benchmarks import TriMouseBenchmark
+import deeplabcut.benchmark
+from deeplabcut.benchmark.benchmarks import FishBenchmark
+from deeplabcut.benchmark.benchmarks import MarmosetBenchmark
+from deeplabcut.benchmark.benchmarks import ParentingMouseBenchmark
+from deeplabcut.benchmark.benchmarks import TriMouseBenchmark
 
 
 class _DLCDataset:
@@ -73,7 +73,7 @@ class DLCBenchMixin:
         return {key: data[key] for key in data.keys()}
 
 
-@benchmark.register
+@deeplabcut.benchmark.register
 class DLCTriMouse(DLCBenchMixin, TriMouseBenchmark):
     """TODO Add Model Description/Card."""
 
@@ -101,7 +101,7 @@ class DLCTriMouse(DLCBenchMixin, TriMouseBenchmark):
     }
 
 
-@benchmark.register
+@deeplabcut.benchmark.register
 class MaDLCParentingMouse(DLCBenchMixin, ParentingMouseBenchmark):
     """TODO Add Model Description/Card."""
 
@@ -134,7 +134,7 @@ class MaDLCParentingMouse(DLCBenchMixin, ParentingMouseBenchmark):
     }
 
 
-@benchmark.register
+@deeplabcut.benchmark.register
 class MaDLCMarmosetBenchmark(DLCBenchMixin, MarmosetBenchmark):
     """TODO Add Model Description/Card."""
 
@@ -166,7 +166,7 @@ class MaDLCMarmosetBenchmark(DLCBenchMixin, MarmosetBenchmark):
     }
 
 
-@benchmark.register
+@deeplabcut.benchmark.register
 class MaDLCFishBenchmark(DLCBenchMixin, FishBenchmark):
     """TODO Add Model Description/Card."""
 
