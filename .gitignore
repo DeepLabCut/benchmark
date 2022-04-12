@@ -1,4 +1,6 @@
+benchmark/data
 .results
+DeepLabCut/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

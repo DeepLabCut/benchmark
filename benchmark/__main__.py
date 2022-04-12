@@ -8,7 +8,12 @@ import benchmark
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--include", nargs="+", default=None, required=False)
-    parser.add_argument("--onerror", default="return", required=False)
+    parser.add_argument(
+        "--onerror", 
+        default="return", 
+        required=False, 
+        choices=("ignore", "return", "raise")
+    )
     parser.add_argument("--nocache", action="store_true")
     return parser.parse_args()
 

@@ -39,7 +39,7 @@ def load_benchmark_data():
 env = Environment(loader=FileSystemLoader("_templates"), autoescape=select_autoescape())
 template = env.get_template("index.html")
 
-df = load_paper_results()
+df = load_benchmark_data()
 
 os.makedirs("generated", exist_ok=True)
 header = df.columns
