@@ -7,15 +7,14 @@ MOCK_MODULES = ["statsmodels", "statsmodels.api", "pytables"]
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = unittest.mock.MagicMock()
 
+import numpy as np
+import pandas as pd
 import pickle
 from collections import defaultdict
 
-import numpy as np
-import pandas as pd
-
 try:
-    from deeplabcut.pose_estimation_tensorflow.core import evaluate_multianimal
     from deeplabcut.pose_estimation_tensorflow.lib import inferenceutils
+    from deeplabcut.pose_estimation_tensorflow.core import evaluate_multianimal
 except (ImportError, ModuleNotFoundError) as e:
     import warnings
 
@@ -32,13 +31,18 @@ def conv_obj_to_assemblies(eval_results_obj, keypoint_names):
     assemblies = {}
     for image_path, results in eval_results_obj.items():
         lst = []
-        for pose in results:
+        for dict_ in results:
             ass = inferenceutils.Assembly(len(keypoint_names))
             for i, kpt in enumerate(keypoint_names):
-                xy = pose[kpt]
-                joint = inferenceutils.Joint(pos=(xy), label=i)
-                ass.add_joint(joint)
-            lst.append(ass)
+                xy = dict_["pose"][kpt]
+                if ~np.isnan(xy).all():
+                    joint = inferenceutils.Joint(pos=(xy), label=i)
+                    ass.add_joint(joint)
+            # TODO(jeylau) add affinity.setter to Assembly
+            ass._affinity = dict_["score"]
+            ass._links = [None]
+            if len(ass):
+                lst.append(ass)
         assemblies[image_path] = lst
     return assemblies
 

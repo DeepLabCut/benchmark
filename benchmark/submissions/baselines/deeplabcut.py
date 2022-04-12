@@ -34,12 +34,12 @@ class _DLCDataset:
             for a in assemblies_.get(i, []):
                 data = np.full((n_kpts, 4), np.nan)
                 data[:n_multi_kpts] = a.data
-                assemblies.append(data)
+                assemblies.append((data, a.affinity))
             single = single_.get(i, [])
             if np.any(single):
                 temp = np.full((n_kpts, 3), np.nan)
                 temp[-n_unique_kpts:] = single
-                single = [temp]
+                single = [(temp, 1)]
             self.__data[name] = assemblies + single
 
     def keys(self):
@@ -48,12 +48,15 @@ class _DLCDataset:
     def __getitem__(self, index):
         num_animals = len(self.__data[index])
         return tuple(
-            dict(
-                zip(
-                    self.keypoint_names,
-                    self.__data[index][animal_id][:, :2].tolist(),
-                )
-            )
+            {
+                "pose": dict(
+                    zip(
+                        self.keypoint_names,
+                        self.__data[index][animal_id][0][:, :2].tolist(),
+                    )
+                ),
+                "score": self.__data[index][animal_id][1],
+            }
             for animal_id in range(num_animals)
         )
 
