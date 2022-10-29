@@ -17,10 +17,10 @@ The mandatory requirements for *building the benchmark page* can be installed vi
 $ pip install -r requirements.txt
 ```
 
-The (non-public) ground truth data needs to be present in `benchmark/data`. Check that this is the case by running
+The (non-public) ground truth data needs to be present in `data/`. Check that this is the case by running
 
 ``` bash
-find benchmark/data -type f
+find data -type f
 benchmark/data/CollectedData_Mackenzie.h5
 benchmark/data/CollectedData_Daniel.h5
 benchmark/data/CollectedData_Valentina.h5
