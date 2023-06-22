@@ -16,7 +16,7 @@ from deeplabcut.pose_estimation_tensorflow.lib import inferenceutils
 from deeplabcut.pose_estimation_tensorflow.core import evaluate_multianimal
 from deeplabcut.utils.conversioncode import guarantee_multiindex_rows
 
-import benchmark.utils
+import deeplabcut.benchmark.utils
 
 MULTI_KEYPOINTS = {
     "trimouse": (

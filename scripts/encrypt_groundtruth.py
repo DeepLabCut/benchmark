@@ -7,7 +7,7 @@ import itertools
 
 from cryptography.fernet import Fernet
 
-import benchmark._crypt
+import deeplabcut.benchmark._crypt
 
 def key_type(arg):
     if os.path.exists(arg) and os.path.isfile(arg):
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         )
     )
     for file in files:
-        benchmark._crypt.encrypt(file, args.key)
+        deeplabcut.benchmark._crypt.encrypt(file, args.key)
     if args.store is None:
         print(
             f"Encrypted using key: {args.key.decode()}\n"
