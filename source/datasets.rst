@@ -3,7 +3,7 @@ DeepLabCut Benchmark Datasets
 
 .. note::
 
- All datasets are under a non-commerical, attribution-required license. Please contact us if you have any questions. TRI-MOUSE, PARENTING-MOUSE, MARMOSETS, and FISH are related to Lauer et al. 2022 (Nature Methods). HORSE-10, -C are related to Mathis, Biasi et al. 2021 (WACV).
+ All datasets are under a non-commerical, attribution-required license (CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/). Please contact us if you have any questions. TRI-MOUSE, PARENTING-MOUSE, MARMOSETS, and FISH are related to Lauer et al. 2022 (Nature Methods). HORSE-10, -C are related to Mathis, Biasi et al. 2021 (WACV).
 
 
 .. list-table:: 
