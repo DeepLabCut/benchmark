@@ -1,0 +1,62 @@
+name: Build benchmark docs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    #- name: Check out data repository
+    #  uses: actions/checkout@v2
+    #  with:
+    #    repository: //<insert your repository here>
+    #    token: ${{ secrets.GIT_TOKEN }}
+
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+        
+    - name: Cache Pip dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Check data
+      id: check-data
+      run: |
+        RESULT=$(find data -type f)
+        echo "::set-output name=check-data::$RESULT"
+        echo "${RESULT}"
+      shell: bash
+
+    - name: Verify data
+      run: |
+        sample_output="data/CollectedData_Mackenzie.h5 data/CollectedData_Daniel.h5 data/CollectedData_Valentina.h5 data/CollectedData_Mostafizur.h5"
+        if [ "${{ steps.check-data.outputs.check-data }}" != "$sample_output" ]; then
+          echo "Data check failed"
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        python -m pytest tests
+
+    - name: Run benchmark
+      run: |
+        python -m benchmark
+
+    - name: Build documentation
+      run: |
+        make deploy
