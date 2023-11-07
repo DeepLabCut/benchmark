@@ -34,5 +34,5 @@ tabulate==0.8.9
 urllib3==1.26.6
 sphinx_autodoc_typehints
 sphinx_copybutton
-'deeplabcut[tf]'
+deeplabcut[tf]
 pytest
