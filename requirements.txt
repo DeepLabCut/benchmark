@@ -35,3 +35,4 @@ urllib3==1.26.6
 sphinx_autodoc_typehints
 sphinx_copybutton
 deeplabcut
+pytest
