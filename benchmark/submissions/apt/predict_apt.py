@@ -1,6 +1,5 @@
 from deeplabcut import benchmark
-from deeplabcut.benchmark.benchmarks import TriMouseBenchmark, MarmosetBenchmark, ParentingMouseBenchmark, FishBenchmark #, DLCBenchMixin
-from benchmark.baselines.deeplabcut import DLCBenchMixin
+from deeplabcut.benchmark.benchmarks import TriMouseBenchmark, MarmosetBenchmark, ParentingMouseBenchmark, FishBenchmark 
 import json
 
 code="https://github.com/kristinbranson/APT.git"
@@ -19,7 +18,7 @@ def get_prefix(name):
   return prefix
 
 @benchmark.register
-class APTTriMouse(DLCBenchMixin, TriMouseBenchmark):
+class APTTriMouse(TriMouseBenchmark):
   def names(self):
     return get_names()
 
@@ -32,7 +31,7 @@ class APTTriMouse(DLCBenchMixin, TriMouseBenchmark):
 
 
 @benchmark.register
-class APTMarmoset(DLCBenchMixin, MarmosetBenchmark):
+class APTMarmoset(MarmosetBenchmark):
   def names(self):
     return get_names()
 
@@ -45,7 +44,7 @@ class APTMarmoset(DLCBenchMixin, MarmosetBenchmark):
 
 
 @benchmark.register
-class APTParenting(DLCBenchMixin, ParentingMouseBenchmark):
+class APTParenting(ParentingMouseBenchmark):
   def names(self):
     return get_names()
 
@@ -58,7 +57,7 @@ class APTParenting(DLCBenchMixin, ParentingMouseBenchmark):
 
 
 @benchmark.register
-class APTFish(DLCBenchMixin, FishBenchmark):
+class APTFish(FishBenchmark):
   def names(self):
     return get_names()
 
