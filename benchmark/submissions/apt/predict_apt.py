@@ -5,7 +5,7 @@ import json
 code="https://github.com/kristinbranson/APT.git"
 
 def get_names():
-  return "GRONe", "MMPose-CiD", "DeTR+GRONe"
+  return "GRONe", "MMPose-CiD", "DeTR+GRONe", "DeTR+Hrformer"
 
 def get_prefix(name):
   if name == "GRONe":
@@ -14,6 +14,8 @@ def get_prefix(name):
     prefix = 'cid'
   elif name == "DeTR+GRONe":
     prefix = 'mdn_bbox'
+  elif name == "DeTR+Hrformer":
+    prefix = 'hrformer_bbox'
 
   return prefix
 
@@ -46,7 +48,8 @@ class APTMarmoset(MarmosetBenchmark):
 @benchmark.register
 class APTParenting(ParentingMouseBenchmark):
   def names(self):
-    return get_names()
+    #return get_names()
+    return "GRONe", "DeTR+GRONe", "DeTR+Hrformer"
 
   def get_predictions(self,name):
     prefix = get_prefix(name)
