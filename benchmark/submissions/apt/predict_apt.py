@@ -48,8 +48,8 @@ class APTMarmoset(MarmosetBenchmark):
 @benchmark.register
 class APTParenting(ParentingMouseBenchmark):
   def names(self):
-    #return get_names()
-    return "GRONe", "DeTR+GRONe", "DeTR+Hrformer"
+    return get_names()
+    #return "GRONe", "DeTR+GRONe", "DeTR+Hrformer"
 
   def get_predictions(self,name):
     prefix = get_prefix(name)
