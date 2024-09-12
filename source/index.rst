@@ -19,9 +19,29 @@ Click on columns to sort in ascending or descending order.
 Press ``Ctrl`` while selecting columns to sort by multiple columns.
 Hover over a column name to get additional explanations for the metric.
 
-.. raw:: html
-   :file: generated/table.html
+TRI-MOUSE
+^^^^^^^^^
 
+.. raw:: html
+   :file: generated/tableTRI-MOUSE.html
+
+FISH
+^^^^
+
+.. raw:: html
+   :file: generated/tableFISH.html
+
+MARMOSETS
+^^^^^^^^^
+
+.. raw:: html
+   :file: generated/tableMARMOSETS.html
+
+PARENTING-MOUSE
+^^^^^^^^^^^^^^^
+
+.. raw:: html
+   :file: generated/tablePARENTING.html
 
 .. toctree::
    :maxdepth: 2

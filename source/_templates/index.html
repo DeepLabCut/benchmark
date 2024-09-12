@@ -1,5 +1,5 @@
 {% block table %}
-<table id="myTable" class="tablesorter">
+<table id={{ table_id }} class="tablesorter">
   <thead>
     {% for column_name, description in columns %}
         <th style="padding: 10px" 

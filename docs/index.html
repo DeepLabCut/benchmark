@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Welcome to the DeepLabCut Benchmark! &#8212; DeepLabCut benchmark</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,15 +20,11 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -43,12 +41,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
       $(function() {
-        $("#myTable").tablesorter();
+        $("#TRI-MOUSE").tablesorter();
+      });
+      $(function() {
+        $("#MARMOSETS").tablesorter();
+      });
+      $(function() {
+        $("#PARENTING").tablesorter();
+      });
+      $(function() {
+        $("#FISH").tablesorter();
       });
     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -110,16 +117,12 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/deeplabcut/benchmark" rel="noopener" target="_blank" title="Github">
-            <span><i class="fab fa-github"></i></span>
-            <label class="sr-only">Github</label>
-          </a>
+          <a class="nav-link" href="https://github.com/deeplabcut/benchmark" rel="noopener" target="_blank" title="Github"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">Github</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/DeepLabCut" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
+          <a class="nav-link" href="https://twitter.com/DeepLabCut" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
       </ul>
       </div>
@@ -154,16 +157,18 @@
               
               <div>
                 
-  <div class="section" id="welcome-to-the-deeplabcut-benchmark">
-<h1>Welcome to the DeepLabCut Benchmark!<a class="headerlink" href="#welcome-to-the-deeplabcut-benchmark" title="Permalink to this headline">¶</a></h1>
+  <section id="welcome-to-the-deeplabcut-benchmark">
+<h1>Welcome to the DeepLabCut Benchmark!<a class="headerlink" href="#welcome-to-the-deeplabcut-benchmark" title="Permalink to this headline">#</a></h1>
 <p>This page hosts the official <a class="reference external" href="https://deeplabcut.org">DeepLabCut</a> Benchmark.</p>
-<div class="section" id="leaderboard">
-<h2>Leaderboard<a class="headerlink" href="#leaderboard" title="Permalink to this headline">¶</a></h2>
+<section id="leaderboard">
+<h2>Leaderboard<a class="headerlink" href="#leaderboard" title="Permalink to this headline">#</a></h2>
 <p>Click on columns to sort in ascending or descending order.
 Press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> while selecting columns to sort by multiple columns.
 Hover over a column name to get additional explanations for the metric.</p>
+<section id="tri-mouse">
+<h3>TRI-MOUSE<a class="headerlink" href="#tri-mouse" title="Permalink to this headline">#</a></h3>
 
-<table id="myTable" class="tablesorter">
+<table id=TRI-MOUSE class="tablesorter">
   <thead>
     
         <th style="padding: 10px" 
@@ -211,7 +216,7 @@ Hover over a column name to get additional explanations for the metric.</p>
       
       <td style="padding: 10px">3.567</td>
       
-      <td style="padding: 10px">0.932</td>
+      <td style="padding: 10px">0.947</td>
       
     </tr>
     
@@ -225,7 +230,7 @@ Hover over a column name to get additional explanations for the metric.</p>
       
       <td style="padding: 10px">4.939</td>
       
-      <td style="padding: 10px">0.943</td>
+      <td style="padding: 10px">0.959</td>
       
     </tr>
     
@@ -239,9 +244,239 @@ Hover over a column name to get additional explanations for the metric.</p>
       
       <td style="padding: 10px">4.216</td>
       
-      <td style="padding: 10px">0.928</td>
+      <td style="padding: 10px">0.943</td>
       
     </tr>
+    
+  </tbody>
+</table>
+</section>
+<section id="fish">
+<h3>FISH<a class="headerlink" href="#fish" title="Permalink to this headline">#</a></h3>
+
+<table id=FISH class="tablesorter">
+  <thead>
+    
+        <th style="padding: 10px" 
+          
+            data-toggle="tooltip" data-placement="top" title="The model name"
+          
+        >
+          Model<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          Dataset<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (assembly)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (detections)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          mAP<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+  </thead>
+  <tbody>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet_ms4 (30k)</a></td>
+      
+      <td style="padding: 10px">FISH</td>
+      
+      <td style="padding: 10px">7.15</td>
+      
+      <td style="padding: 10px">4.918</td>
+      
+      <td style="padding: 10px">0.75</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7_s4 (30k)</a></td>
+      
+      <td style="padding: 10px">FISH</td>
+      
+      <td style="padding: 10px">6.85</td>
+      
+      <td style="padding: 10px">4.463</td>
+      
+      <td style="padding: 10px">0.75</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- ResNet50_s4 (30k)</a></td>
+      
+      <td style="padding: 10px">FISH</td>
+      
+      <td style="padding: 10px">7.03</td>
+      
+      <td style="padding: 10px">4.36</td>
+      
+      <td style="padding: 10px">0.736</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+</section>
+<section id="marmosets">
+<h3>MARMOSETS<a class="headerlink" href="#marmosets" title="Permalink to this headline">#</a></h3>
+
+<table id=MARMOSETS class="tablesorter">
+  <thead>
+    
+        <th style="padding: 10px" 
+          
+            data-toggle="tooltip" data-placement="top" title="The model name"
+          
+        >
+          Model<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          Dataset<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (assembly)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (detections)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          mAP<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+  </thead>
+  <tbody>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet (200k)</a></td>
+      
+      <td style="padding: 10px">MARMOSETS</td>
+      
+      <td style="padding: 10px">8.1</td>
+      
+      <td style="padding: 10px">8.815</td>
+      
+      <td style="padding: 10px">0.791</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet_ms4 (200k)</a></td>
+      
+      <td style="padding: 10px">MARMOSETS</td>
+      
+      <td style="padding: 10px">7.56</td>
+      
+      <td style="padding: 10px">8.504</td>
+      
+      <td style="padding: 10px">0.808</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7 (200k)</a></td>
+      
+      <td style="padding: 10px">MARMOSETS</td>
+      
+      <td style="padding: 10px">7.27</td>
+      
+      <td style="padding: 10px">7.453</td>
+      
+      <td style="padding: 10px">0.818</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7_s4 (200k)</a></td>
+      
+      <td style="padding: 10px">MARMOSETS</td>
+      
+      <td style="padding: 10px">6.83</td>
+      
+      <td style="padding: 10px">7.042</td>
+      
+      <td style="padding: 10px">0.817</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+</section>
+<section id="parenting-mouse">
+<h3>PARENTING-MOUSE<a class="headerlink" href="#parenting-mouse" title="Permalink to this headline">#</a></h3>
+
+<table id=PARENTING class="tablesorter">
+  <thead>
+    
+        <th style="padding: 10px" 
+          
+            data-toggle="tooltip" data-placement="top" title="The model name"
+          
+        >
+          Model<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          Dataset<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (assembly)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          RMSE (detections)<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+        <th style="padding: 10px" 
+          
+        >
+          mAP<i class="fas fa-arrows-alt-v"></i>
+        </th>
+    
+  </thead>
+  <tbody>
     
     <tr>
       
@@ -285,110 +520,13 @@ Hover over a column name to get additional explanations for the metric.</p>
       
     </tr>
     
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet (200k)</a></td>
-      
-      <td style="padding: 10px">MARMOSETS</td>
-      
-      <td style="padding: 10px">8.1</td>
-      
-      <td style="padding: 10px">5.828</td>
-      
-      <td style="padding: 10px">0.883</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet_ms4 (200k)</a></td>
-      
-      <td style="padding: 10px">MARMOSETS</td>
-      
-      <td style="padding: 10px">7.56</td>
-      
-      <td style="padding: 10px">5.265</td>
-      
-      <td style="padding: 10px">0.895</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7 (200k)</a></td>
-      
-      <td style="padding: 10px">MARMOSETS</td>
-      
-      <td style="padding: 10px">7.27</td>
-      
-      <td style="padding: 10px">5.688</td>
-      
-      <td style="padding: 10px">0.888</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7_s4 (200k)</a></td>
-      
-      <td style="padding: 10px">MARMOSETS</td>
-      
-      <td style="padding: 10px">6.83</td>
-      
-      <td style="padding: 10px">4.605</td>
-      
-      <td style="padding: 10px">0.893</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- DLCRNet_ms4 (30k)</a></td>
-      
-      <td style="padding: 10px">FISH</td>
-      
-      <td style="padding: 10px">7.15</td>
-      
-      <td style="padding: 10px">4.918</td>
-      
-      <td style="padding: 10px">0.754</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- EfficientNet B7_s4 (30k)</a></td>
-      
-      <td style="padding: 10px">FISH</td>
-      
-      <td style="padding: 10px">6.85</td>
-      
-      <td style="padding: 10px">4.463</td>
-      
-      <td style="padding: 10px">0.753</td>
-      
-    </tr>
-    
-    <tr>
-      
-      <td style="padding: 10px"><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank">- ResNet50_s4 (30k)</a></td>
-      
-      <td style="padding: 10px">FISH</td>
-      
-      <td style="padding: 10px">7.03</td>
-      
-      <td style="padding: 10px">4.36</td>
-      
-      <td style="padding: 10px">0.741</td>
-      
-    </tr>
-    
   </tbody>
 </table>
 <div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -400,20 +538,20 @@ Hover over a column name to get additional explanations for the metric.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, DeepLabCut Developers.<br/>
+    &copy; Copyright 2021, DeepLabCut Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     
