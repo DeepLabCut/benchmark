@@ -34,9 +34,8 @@ def load_benchmark_data():
         "../.results", on_missing="raise"
     ).toframe()
     # TODO(niels): Get the code from the results DataFrame
-    results["Code"] = "https://github.com/DeepLabCut/DeepLabCut"
     df = (
-        results.reset_index()[["method", "Code", "benchmark", "RMSE", "mAP"]]
+        results.reset_index()[["method", "code", "benchmark", "RMSE", "mAP"]]
         .rename(
             columns=dict(
                 benchmark="Dataset", method="Model", RMSE="RMSE (detections)", mAP="mAP"
@@ -57,7 +56,7 @@ def load_benchmark_data():
     ]
 
     def _add_links(line):
-        line["Model"] = '<a href="{Code}" target="_blank">{Model}</a>'.format(**line)
+        line["Model"] = '<a href="{code}" target="_blank">{Model}</a>'.format(**line)
         return line
 
     df = df.reset_index().apply(_add_links, axis=1)
