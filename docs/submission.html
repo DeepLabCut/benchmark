@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>How to submit your models to the benchmark &#8212; DeepLabCut benchmark</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,15 +20,11 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -43,12 +41,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
       $(function() {
-        $("#myTable").tablesorter();
+        $("#TRI-MOUSE").tablesorter();
+      });
+      $(function() {
+        $("#MARMOSETS").tablesorter();
+      });
+      $(function() {
+        $("#PARENTING").tablesorter();
+      });
+      $(function() {
+        $("#FISH").tablesorter();
       });
     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -110,16 +117,12 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/deeplabcut/benchmark" rel="noopener" target="_blank" title="Github">
-            <span><i class="fab fa-github"></i></span>
-            <label class="sr-only">Github</label>
-          </a>
+          <a class="nav-link" href="https://github.com/deeplabcut/benchmark" rel="noopener" target="_blank" title="Github"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">Github</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/DeepLabCut" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
+          <a class="nav-link" href="https://twitter.com/DeepLabCut" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
       </ul>
       </div>
@@ -154,10 +157,10 @@
               
               <div>
                 
-  <div class="section" id="how-to-submit-your-models-to-the-benchmark">
-<h1>How to submit your models to the benchmark<a class="headerlink" href="#how-to-submit-your-models-to-the-benchmark" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="how-to-submit-your-models-to-the-benchmark">
+<h1>How to submit your models to the benchmark<a class="headerlink" href="#how-to-submit-your-models-to-the-benchmark" title="Permalink to this headline">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>Submission to the benchmark is simple and framework-agnostic:</p>
 <blockquote>
 <div><ul class="simple">
@@ -170,9 +173,9 @@ Package these predictions in a format of your choice</p></li>
 along with your predictions as a pull request to the benchmark.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="preparing-your-submission">
-<h2>Preparing your submission<a class="headerlink" href="#preparing-your-submission" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="preparing-your-submission">
+<h2>Preparing your submission<a class="headerlink" href="#preparing-your-submission" title="Permalink to this headline">#</a></h2>
 <p>Your submission will be a pull request directly to the <a href="#id1"><span class="problematic" id="id2">``</span></a>benchmark’’ package.
 The PR should have the following structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">benchmark</span><span class="o">/</span>
@@ -201,11 +204,11 @@ for method definitions.</p>
    <span class="n">code</span> <span class="o">=</span> <span class="s2">&quot;link/to/your/code.git&quot;</span>
 
    <span class="k">def</span> <span class="nf">names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="sd">&quot;&quot;&quot;An iterable of model names to evaluate.&quot;&quot;&quot;</span>
+<span class="w">      </span><span class="sd">&quot;&quot;&quot;An iterable of model names to evaluate.&quot;&quot;&quot;</span>
       <span class="k">return</span> <span class="s2">&quot;FooNet-42&quot;</span><span class="p">,</span> <span class="s2">&quot;BarNet-73&quot;</span>
 
    <span class="k">def</span> <span class="nf">get_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-      <span class="sd">&quot;&quot;&quot;This function will receive one of the names returned by the</span>
+<span class="w">      </span><span class="sd">&quot;&quot;&quot;This function will receive one of the names returned by the</span>
 <span class="sd">      names() function, and should return a dictionary containing your</span>
 <span class="sd">      predictions.</span>
 <span class="sd">      &quot;&quot;&quot;</span>
@@ -213,15 +216,21 @@ for method definitions.</p>
          <span class="s2">&quot;path/to/image.png&quot;</span> <span class="p">:</span> <span class="p">(</span>
             <span class="c1"># animal 1</span>
             <span class="p">{</span>
-               <span class="s2">&quot;snout&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-               <span class="s2">&quot;leftear&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-               <span class="o">...</span>
+               <span class="s2">&quot;pose&quot;</span><span class="p">:</span> <span class="p">{</span>
+                 <span class="s2">&quot;snout&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span>
+                 <span class="s2">&quot;leftear&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+                 <span class="o">...</span>
+               <span class="p">},</span>
+               <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">0.9172</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="c1"># animal 2</span>
             <span class="p">{</span>
-               <span class="s2">&quot;snout&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-               <span class="s2">&quot;leftear&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-               <span class="o">...</span>
+               <span class="s2">&quot;pose&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="s2">&quot;snout&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">27</span><span class="p">,</span> <span class="mi">138</span><span class="p">),</span>
+                  <span class="s2">&quot;leftear&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">142</span><span class="p">),</span>
+                  <span class="o">...</span>
+               <span class="p">},</span>
+               <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">0.8534</span><span class="p">,</span>
             <span class="p">},</span>
          <span class="p">),</span>
          <span class="o">...</span>
@@ -229,30 +238,30 @@ for method definitions.</p>
 </pre></div>
 </div>
 <p>For more advanced use-cases, please refer to our <span class="xref std std-doc">api</span>.</p>
-</div>
-<div class="section" id="testing-your-submission">
-<h2>Testing your submission<a class="headerlink" href="#testing-your-submission" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="testing-your-submission">
+<h2>Testing your submission<a class="headerlink" href="#testing-your-submission" title="Permalink to this headline">#</a></h2>
 <p>You can test your submission by running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -m benchmark
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>benchmark
 </pre></div>
 </div>
 <p>from the repository root directory, which will generate a table with all
 available results. If your own submission does not appear, make sure that you
 added your evaluation class to the benchmark with the <code class="docutils literal notranslate"><span class="pre">&#64;benchmark.register</span></code>
 decorator.</p>
-</div>
-<div class="section" id="submission">
-<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">#</a></h2>
 <p>To submit, open a pull request directly in the benchmark repository:
 <a class="reference external" href="https://github.com/DeepLabCut/benchmark/pulls">https://github.com/DeepLabCut/benchmark/pulls</a></p>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <p>If you encounter difficulties during preparation of your submission that are not
 covered in this tutorial, please open an issue in the benchmark repository:
 <a class="reference external" href="https://github.com/DeepLabCut/benchmark_internal/issues">https://github.com/DeepLabCut/benchmark_internal/issues</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -264,20 +273,20 @@ covered in this tutorial, please open an issue in the benchmark repository:
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, DeepLabCut Developers.<br/>
+    &copy; Copyright 2021, DeepLabCut Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

@@ -65,15 +65,21 @@ These looks as follows:
             "path/to/image.png" : (
                # animal 1
                {
-                  "snout" : (0, 1),
-                  "leftear" : (2, 3),
-                  ...
+                  "pose": {
+                    "snout" : (12, 17),
+                    "leftear" : (15, 13),
+                    ...
+                  },
+                  "score": 0.9172,
                },
                # animal 2
                {
-                  "snout" : (0, 1),
-                  "leftear" : (2, 3),
-                  ...
+                  "pose": {
+                     "snout" : (27, 138),
+                     "leftear" : (23, 142),
+                     ...
+                  },
+                  "score": 0.8534,
                },
             ),
             ...
