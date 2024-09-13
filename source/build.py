@@ -33,7 +33,6 @@ def load_benchmark_data():
     results = deeplabcut.benchmark.loadcache(
         "../.results", on_missing="raise"
     ).toframe()
-    # TODO(niels): Get the code from the results DataFrame
     df = (
         results.reset_index()[["method", "code", "benchmark", "RMSE", "mAP"]]
         .rename(
